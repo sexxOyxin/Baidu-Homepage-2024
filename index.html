@@ -11,9 +11,9 @@
     <title>百度</title>
 </head>
 
-<body>
+<body style="margin: 0;">
     <!-- 左上角导航 -->
-     <div id="topLeft">
+    <div id="topLeft">
         <ul>
             <li><a href="http://news.baidu.com" target="_blank" class="leftText">新闻</a></li>
             <li><a href="https://www.hao123.com?src=from_pc_logon" target="_blank" class="leftText">hao123</a></li>
@@ -23,7 +23,8 @@
             <li><a href="http://image.baidu.com" target="_blank" class="leftText">图片</a></li>
             <li><a href="https://pan.baidu.com?from=1026962h" target="_blank" class="leftText">网盘</a></li>
             <li><a href="https://wenku.baidu.com/?fr=bdpcindex" target="_blank" class="leftText">文库</a></li>
-            <li><a href="https://chat.baidu.com/search?isShowHello=1&amp;pd=csaitab&amp;setype=csaitab&amp;extParams=%7B%22enter_type%22%3A%22home_tab%22%7D"" target="_blank" class="leftText">AI助手</a></li>
+            <li><a href="https://chat.baidu.com/search?isShowHello=1&amp;pd=csaitab&amp;setype=csaitab&amp;extParams=%7B%22enter_type%22%3A%22home_tab%22%7D"" target="
+                    _blank" class="leftText">AI助手</a></li>
             <li><a href="http://news.baidu.com" target="_blank" class="leftText">更多</a></li>
         </ul>
     </div>
@@ -32,27 +33,80 @@
     <div id="topRight">
         <ul>
             <li>设置</li>
-            <li style="margin-top: 18px; margin-left: 8px;"><a href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F&sms=5" target="_blank" id="loginBtn">登录</a></li>
+            <li style="margin-top: 18px; margin-left: 8px;"><a
+                    href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F&sms=5"
+                    target="_blank" id="loginBtn">登录</a></li>
         </ul>
-     </div>
+    </div>
 
     <!-- 奥运logo动图 -->
-     <div class="logo">
+    <div class="logo">
         <a href="https://www.baidu.com/s?word=%E5%A5%A5%E8%BF%90%E4%BC%9A&rsv_dl=ay24_pd_gkpc">
             <img src="logo.gif" width="270" height="129" title="奥运会">
         </a>
-     </div>
+    </div>
 
     <!-- 搜索框 -->
-     <div>
-         <input id="searchbox" type="text">
-         <span class="camera"></span>
-         <button class="clickbtn">百度一下</button>
-     </div>
+    <!-- 先固定最外层定位，再调整内部 -->
+    <div class="search">
+        <input id="searchbox" type="text">
+        <span class="camera"></span>
+        <button class="clickbtn">百度一下</button>
+    </div>
 
     <!-- 百度热榜 -->
+    <div class="HotSerch">
+        <a href="http://top.baidu.com/?fr=mhd_card" class="c-icon HotSerchText"></a>
+        <i class="c-icon arrow"></i>
+        <!--换一换按钮-->
+        <div class="ChangeIt""><i class=" c-icon" style="margin-top: 5px;"></i>
+            <font style="margin-left:5px; font-size: 14px;">换一换</font>
+        </div>
+        <ul class="HotList">
+            <!--热点列表-->
+            <li class="HotSerch-LeftItem" id="Hot1" data-index="0">
+                <font class="HotNum" style="color: #ff0909" id="HotNum1">1</font>
+                <a id="HotText1" onclick="Open_NewHotPage1()">联网查看实时热点数据</a><span class="HotTip" id="Hot_Tip">热</span>
+            </li>
+            <li class="HotSerch-RightItem" id="Hot4" data-index="3">
+                <font class="HotNum" id="HotNum4">4</font>
+                <a id="HotText4" onclick="Open_NewHotPage2()">联网查看实时热点数据</a>
+            </li>
+            <li class="HotSerch-LeftItem" id="Hot2" data-index="1">
+                <font class="HotNum" style="color:rgb(218, 90, 0)" id="HotNum2">2</font>
+                <a id="HotText2" onclick="Open_NewHotPage3()">联网查看实时热点数据</a>
+            </li>
+            <li class="HotSerch-RightItem" id="Hot5" data-index="4">
+                <font class="HotNum" id="HotNum5">5</font>
+                <a id="HotText5" onclick="Open_NewHotPage4()">联网查看实时热点数据</a>
+            </li>
+            <li class="HotSerch-LeftItem" id="Hot3" data-index="2">
+                <font class="HotNum" style="color:rgb(225, 195, 29)" id="HotNum3">3</font>
+                <a id="HotText3" onclick="Open_NewHotPage5()">联网查看实时热点数据</a>
+            </li>
+            <li class="HotSerch-RightItem" id="Hot6" data-index="5">
+                <font class="HotNum" id="HotNum6">6</font>
+                <a id="HotText6" onclick="Open_NewHotPage6()">联网查看实时热点数据</a>
+            </li>
+        </ul>
+    </div>
+
     <!-- 右下角工具 -->
     <!-- 页脚 -->
+    <div class="footer">
+        <a class="text-color" href="//home.baidu.com" target="_blank">关于百度</a>
+        <a class="text-color" href="http://ir.baidu.com" target="_blank">About Baidu</a>
+        <a class="text-color" href="//www.baidu.com/duty" target="_blank">使用百度前必读</a>
+        <a class="text-color" href="https://help.baidu.com/question?prod_id=1" target="_blank">帮助中心</a>
+        </p>
+        <a class="text-color" href="https://e.baidu.com/?refer=1271" target="_blank">企业推广</a>
+        <a class="text-color"
+                href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001"
+                target="_blank">京公网安备11000002000001号</a>
+        <a class="text-color" href="https://beian.miit.gov.cn" target="_blank">京ICP证030173号</a>
+        <span class="text-color">互联网新闻信息服务许可证11220180008</span></p>
+        <span class="text-color">网络文化经营许可证： 京网文〔2023〕1034-029号</span></p>
+    </div>
 </body>
 
 </html>
