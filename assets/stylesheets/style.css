@@ -322,3 +322,44 @@ li, li a {
     text-align: center;
     padding-top: 1px;
 }
+#rbottom {
+    position: fixed;
+    right: 24px;
+    bottom: 64px;
+    background-color: #fbfbfb;
+    width: 44px;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+}
+.fuzhupic {
+    width: 18px;
+    height: 18px;
+    margin: 0 auto;
+    background: url(../images/fuzhu.png) no-repeat;
+    background-size: 16px;
+    background-position: center;
+    border-radius: 50%;
+    border: 1px solid #626675;
+}
+.erweima {
+    height: 24px;
+    width: 24px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+.up {
+    line-height: 46px;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding-top: 12px;
+}
+.down {
+    width: 44px;
+    height: 37px;
+    border-radius: 50%;
+    padding-top: 17px;
+    margin: auto;
+}
