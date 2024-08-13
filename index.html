@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="icon" href="commen/favicon.ico" type="image/x-icon" /> -->
     <link rel="icon" sizes="any" mask="" href="https://www.baidu.com/favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
     <!-- <title>百度一下，你就知道</title> -->
     <title>百度</title>
+    <script src="assets/scripts/javascript.js"></script>
 </head>
 
 <body style="margin: 0;">
@@ -25,14 +26,40 @@
             <li><a href="https://wenku.baidu.com/?fr=bdpcindex" target="_blank" class="leftText">文库</a></li>
             <li><a href="https://chat.baidu.com/search?isShowHello=1&amp;pd=csaitab&amp;setype=csaitab&amp;extParams=%7B%22enter_type%22%3A%22home_tab%22%7D"" target="
                     _blank" class="leftText">AI助手</a></li>
-            <li><a href="http://news.baidu.com" target="_blank" class="leftText">更多</a></li>
+            <li>
+                <a href="http://news.baidu.com" target="_blank" class="leftText">更多</a>
+                <div class="morelist">
+                    <div class="moreleft ml"><a href="http://fanyi.baidu.com/"><img src="assets/images/fanyi.png" alt=""><div class="moredes">翻译</div></a></div>
+                    <div class="moreleft mm"><a href="http://xueshu.baidu.com/"><img src="assets/images/xueshu.png" alt=""><div class="moredes">学术</div></a></div>
+                    <div class="moreleft mr"><a href="https://baike.baidu.com"><img src="assets/images/baike.png" alt=""><div class="moredes">百科</div></a></div>
+                    <div class="moreleft ml"><a href="https://zhidao.baidu.com"><img src="assets/images/zhibo.png" alt=""><div class="moredes">知道</div></a></div>
+                    <div class="moreleft mm"><a href="https://jiankang.baidu.com/widescreen/home"><img src="assets/images/jiankang.png" alt=""><div class="moredes">健康</div></a></div>
+                    <div class="moreleft mr"><a href="http://e.baidu.com/ebaidu/home?refer=887"><img src="assets/images/yingxiaotuiguang.png" alt=""><div class="moredes">营销推广</div></a></div>
+                    <div class="moreleft ml"><a href="https://live.baidu.com/"><img src="assets/images/zhibo.png" alt=""><div class="moredes">直播</div></a></div>
+                    <div class="moreleft mm"><a href="http://music.taihe.com"><img src="assets/images/yinyue.png" alt=""><div class="moredes">音乐</div></a></div>
+                    <div class="moreleft mr"><a href="https://cp.baidu.com/?sa=bdindex"><img src="assets/images/chengpian.png" alt=""><div class="moredes">橙篇</div></a></div>
+                    <div class="moreleft last" style="width: 200px;"><a class="lookall" href="http://www.baidu.com/more/">查看全部百度产品</a></div>
+                </div>
+            </li>
         </ul>
     </div>
 
     <!-- 右上角设置&登录 -->
     <div id="topRight">
         <ul>
-            <li>设置</li>
+            <li>
+                <div style="position: relative; top: 10px"><a href="">设置</a></div>
+                <div class="subsetup" style="position: absolute;">
+                    <ul class="setmorelist">
+                        <li><a href="javascript:;">搜索设置</a></li>
+                        <li><a href="//www.baidu.com/gaoji/advanced.html" target="_blank">高级搜索</a></li>
+                        <li><a href="javascript:;">关闭预测</a></li>
+                        <li><a href="https://www.baidu.com/duty/privacysettings.html" target="_blank">隐私设置</a></li>
+                        <li><a href="javascript:;">关闭热搜</a></li>
+                        <li><a href="javascript:;" style="display: none;">开启热搜</a></li>
+                    </ul>
+                </div>
+            </li>
             <li style="margin-top: 18px; margin-left: 8px;"><a
                     href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F&sms=5"
                     target="_blank" id="loginBtn">登录</a></li>
@@ -42,16 +69,16 @@
     <!-- 奥运logo动图 -->
     <div class="logo">
         <a href="https://www.baidu.com/s?word=%E5%A5%A5%E8%BF%90%E4%BC%9A&rsv_dl=ay24_pd_gkpc">
-            <img src="logo.gif" width="270" height="129" title="奥运会">
+            <img src="assets/images/logo.gif" width="270" height="129" title="奥运会">
         </a>
     </div>
 
     <!-- 搜索框 -->
     <!-- 先固定最外层定位，再调整内部 -->
     <div class="search">
-        <input id="searchbox" type="text">
+        <input id="searchbox" type="text" onkeydown="serchfunBtn()">
         <span class="camera"></span>
-        <button class="clickbtn">百度一下</button>
+        <button class="clickbtn" onclick="serchfun()">百度一下</button>
     </div>
 
     <!-- 百度热榜 -->
@@ -66,27 +93,27 @@
             <!--热点列表-->
             <li class="HotSerch-LeftItem" id="Hot1" data-index="0">
                 <font class="HotNum" style="color: #ff0909" id="HotNum1">1</font>
-                <a id="HotText1" onclick="Open_NewHotPage1()">联网查看实时热点数据</a><span class="HotTip" id="Hot_Tip">热</span>
+                <a id="HotText1" onclick="Open_NewHotPage1()">跟着总书记奔赴“诗与远方</a><span class="HotTip" id="Hot_Tip">热</span>
             </li>
             <li class="HotSerch-RightItem" id="Hot4" data-index="3">
                 <font class="HotNum" id="HotNum4">4</font>
-                <a id="HotText4" onclick="Open_NewHotPage2()">联网查看实时热点数据</a>
+                <a id="HotText4" onclick="Open_NewHotPage2()">穿越百年的对话 暑期红色文旅超燃</a>
             </li>
             <li class="HotSerch-LeftItem" id="Hot2" data-index="1">
                 <font class="HotNum" style="color:rgb(218, 90, 0)" id="HotNum2">2</font>
-                <a id="HotText2" onclick="Open_NewHotPage3()">联网查看实时热点数据</a>
+                <a id="HotText2" onclick="Open_NewHotPage3()">雨水增多 这些地区注意防范</a>
             </li>
             <li class="HotSerch-RightItem" id="Hot5" data-index="4">
                 <font class="HotNum" id="HotNum5">5</font>
-                <a id="HotText5" onclick="Open_NewHotPage4()">联网查看实时热点数据</a>
+                <a id="HotText5" onclick="Open_NewHotPage4()">全红婵给爷爷打电话必有三连问</a>
             </li>
             <li class="HotSerch-LeftItem" id="Hot3" data-index="2">
                 <font class="HotNum" style="color:rgb(225, 195, 29)" id="HotNum3">3</font>
-                <a id="HotText3" onclick="Open_NewHotPage5()">联网查看实时热点数据</a>
+                <a id="HotText3" onclick="Open_NewHotPage5()">216次高考钉子户唐尚珺决定读大学</a>
             </li>
             <li class="HotSerch-RightItem" id="Hot6" data-index="5">
                 <font class="HotNum" id="HotNum6">6</font>
-                <a id="HotText6" onclick="Open_NewHotPage6()">联网查看实时热点数据</a>
+                <a id="HotText6" onclick="Open_NewHotPage6()">第一批巴黎奥运奖牌已经开始脱皮了</a>
             </li>
         </ul>
     </div>
